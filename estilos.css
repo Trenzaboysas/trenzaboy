@@ -3676,3 +3676,168 @@ body {
         float: none !important; /* Elimina alineaciones antiguas a los lados */
     }
 }
+/* ==============================================================
+   AJUSTES RESPONSIVE DE ALTO IMPACTO (MÓVIL COMPACTO)
+============================================================== */
+@media (max-width: 768px) {
+
+    /* --- 1. BLOQUEAR DESPLAZAMIENTO HORIZONTAL --- */
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding-top: 80px !important; /* Mantiene espacio óptimo para el header compacto */
+    }
+
+    * {
+        box-sizing: border-box !important;
+    }
+
+    /* --- 2. HEADER Y BANNER COMPACTOS --- */
+    .header {
+        height: auto !important;
+        padding: 8px 12px !important;
+    }
+
+    .header img, .logo img {
+        max-height: 40px !important; /* Reduce el tamaño del logo en celular */
+        width: auto !important;
+    }
+
+    .banner, .hero, .bienvenida {
+        padding: 20px 10px !important;
+        min-height: auto !important;
+    }
+
+    .banner h1, .bienvenida h1 {
+        font-size: 22px !important; /* Reduce el tamaño del título del banner */
+        line-height: 1.2 !important;
+    }
+
+    /* --- 3. GUÍA DE DIÁMETROS Y TABLA VERDE (Ajuste total a pantalla) --- */
+    .contenedor-guia {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+        padding: 0 5px !important;
+    }
+
+    /* Forzar a la tabla a mostrarse completa sin barra de scroll */
+    .tabla-diametros {
+        width: 100% !important;
+        overflow-x: visible !important;
+        font-size: 11px !important; /* Reduce la fuente para que quepa completa */
+        border-radius: 12px !important;
+    }
+
+    .tabla-diametros .encabezado div {
+        padding: 6px 2px !important;
+        font-size: 10px !important;
+    }
+
+    .fila-diametro {
+        min-height: 50px !important;
+        grid-template-columns: 1fr 0.8fr 0.8fr 1.8fr !important;
+    }
+
+    .fila-diametro > div {
+        padding: 6px 2px !important;
+        font-size: 10px !important;
+    }
+
+    .imagen-diametro img {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .medida-pulgada, .medida-mm {
+        font-size: 12px !important;
+    }
+
+    /* Caja de Personalización compacta */
+    .personalizacion {
+        padding: 15px 12px !important;
+        border-radius: 12px !important;
+    }
+
+    .personalizacion h3 {
+        font-size: 16px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .opcion {
+        padding: 8px 0 !important;
+        gap: 8px !important;
+    }
+
+    .opcion i {
+        min-width: 28px !important;
+        height: 28px !important;
+        font-size: 13px !important;
+    }
+
+    .opcion h4 {
+        font-size: 12px !important;
+        margin-bottom: 2px !important;
+    }
+
+    .opcion p {
+        font-size: 10px !important;
+        line-height: 1.2 !important;
+    }
+
+    /* --- 4. QUIÉNES SOMOS (Las 3 tarjetas visibles en la misma pantalla) --- */
+    .quienes-somos, .tarjetas-contenedor, .grid-nosotros {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important; /* Fuerza las 3 tarjetas en 1 sola fila */
+        gap: 6px !important;
+        padding: 10px 5px !important;
+    }
+
+    .tarjeta, .card {
+        padding: 8px 5px !important;
+        max-height: 180px !important; /* Limita la altura para que no se expandan infinitamente */
+        overflow: hidden !important;
+        text-align: center !important;
+    }
+
+    .tarjeta h3, .card h3, .tarjeta h4 {
+        font-size: 11px !important;
+        margin-bottom: 4px !important;
+    }
+
+    .tarjeta p, .card p {
+        font-size: 9px !important; /* Texto micro para que no deforme la tarjeta */
+        line-height: 1.1 !important;
+        display: -webkit-box;
+        -webkit-line-clamp: 4; /* Oculta el exceso de texto si es muy largo */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    /* --- 5. ¿POR QUÉ ELEGIR TRENZABOY? Y TARJETAS INFERIORES --- */
+    .por-que-elegir, .porque-elegir {
+        width: 100% !important;
+        padding: 20px 10px !important;
+        background-size: cover !important;
+    }
+
+    .por-que-elegir h2, .porque-elegir h2, .titulo-seccion h2 {
+        font-size: 18px !important; /* Ajusta el título para que no se corte */
+        word-wrap: break-word !important;
+        text-align: center !important;
+    }
+
+    /* Ajuste de tarjetas de la parte inferior */
+    .galeria-personalizacion, .tarjetas-abajo, .beneficios-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 tarjetas por fila en versión pequeña */
+        gap: 8px !important;
+        width: 100% !important;
+    }
+
+    .ejemplo-personalizacion, .tarjeta-abajo {
+        height: 110px !important; /* Altura compacta para evitar cortes */
+        width: 100% !important;
+    }
+}
