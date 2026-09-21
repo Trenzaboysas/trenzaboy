@@ -3598,3 +3598,140 @@ body {
 .cuerda-header {
     margin-top: 40px !important;
 }
+/* ==============================================================
+   AJUSTES RESPONSIVE MÓVIL
+============================================================== */
+@media (max-width: 768px) {
+
+    /* --- 1. EVITAR DESPLAZAMIENTO LATERAL --- */
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+
+    /* --- 2. GUÍA DE DIÁMETROS Y PERSONALIZACIÓN --- */
+    .contenedor-guia {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+        padding: 0 5px !important;
+    }
+
+    .tabla-diametros {
+        width: 100% !important;
+        overflow-x: visible !important;
+        font-size: 11px !important;
+        border-radius: 12px !important;
+    }
+
+    .tabla-diametros .encabezado div,
+    .fila-diametro > div {
+        padding: 6px 2px !important;
+        font-size: 10px !important;
+    }
+
+    .imagen-diametro img {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .personalizacion {
+        padding: 15px 12px !important;
+        border-radius: 12px !important;
+    }
+
+    /* --- 3. SECCIÓN PRODUCTOS --- */
+    .productos, 
+    .contenedor-productos,
+    .catalogo-productos,
+    .grid-productos {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        padding: 20px 10px !important;
+        box-sizing: border-box !important;
+    }
+
+    .producto-card,
+    .tarjeta-producto,
+    .producto {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin-bottom: 20px !important;
+    }
+
+    .producto-card img,
+    .tarjeta-producto img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 250px !important;
+        object-fit: cover !important;
+    }
+
+    /* --- 4. QUIÉNES SOMOS --- */
+    .quienes-somos, 
+    .tarjetas-contenedor, 
+    .grid-nosotros {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+        padding: 15px 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .tarjeta, 
+    .card {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        padding: 18px 15px !important;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08) !important;
+    }
+
+    .tarjeta h3, .card h3 {
+        font-size: 16px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .tarjeta p, .card p {
+        font-size: 13px !important;
+        line-height: 1.4 !important;
+    }
+
+    /* --- 5. ¿POR QUÉ ELEGIR TRENZABOY? --- */
+    .por-que-elegir, 
+    .porque-elegir,
+    .seccion-porque {
+        width: 100% !important;
+        padding: 30px 15px !important;
+        box-sizing: border-box !important;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+
+    .por-que-elegir h2, 
+    .porque-elegir h2 {
+        font-size: 20px !important;
+        white-space: normal !important;
+        text-align: center !important;
+        line-height: 1.3 !important;
+        margin-bottom: 20px !important;
+    }
+
+    .beneficios-grid,
+    .tarjetas-abajo {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        width: 100% !important;
+    }
+
+    .tarjeta-abajo,
+    .ejemplo-personalizacion {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 120px !important;
+    }
+}
