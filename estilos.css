@@ -3598,3 +3598,81 @@ body {
 .cuerda-header {
     margin-top: 40px !important;
 }
+/* ==============================================================
+   AJUSTES RESPONSIVE PARA CELULARES (Pantallas de 768px o menos)
+============================================================== */
+@media (max-width: 768px) {
+
+    /* 1. EVITAR DESPLAZAMIENTO LATERAL MANTENIENDO TODO EN PANTALLA */
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+
+    /* 2. QUIÉNES SOMOS Y TARJETAS EXTENDIDAS */
+    /* Pasamos cualquier contenedor con tarjetas a 1 sola columna vertical */
+    .quienes-somos,
+    .tarjetas-contenedor,
+    .tarjetas,
+    .galeria-personalizacion,
+    .grid-nosotros {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .tarjeta, 
+    .card, 
+    .ejemplo-personalizacion {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important; /* Permite que el contenido no se corte */
+        margin-bottom: 20px !important;
+    }
+
+    /* 3. ¿POR QUÉ ELEGIR TRENZABOY? (ARREGLA LO CORTADO) */
+    .por-que-elegir,
+    .porque-elegir,
+    .beneficios-contenedor {
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 40px 20px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 4. GUÍA DE DIÁMETROS Y PERSONALIZACIÓN */
+    .contenedor-guia {
+        grid-template-columns: 1fr !important; /* Caja verde pasa abajo de la tabla */
+        width: 100% !important;
+    }
+
+    .tabla-diametros {
+        width: 100% !important;
+        overflow-x: auto !important; /* Permite deslizar si la tabla no cabe */
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* 5. CONTÁCTANOS Y SUS IMÁGENES CORRIDAS */
+    .contacto,
+    .seccion-contacto,
+    .contacto-contenedor {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        width: 100% !important;
+        padding: 30px 15px !important;
+    }
+
+    .contacto img,
+    .seccion-contacto img,
+    .contacto-imagen {
+        width: 100% !important;
+        max-width: 350px !important; /* Evita que la imagen sea gigante */
+        height: auto !important;
+        margin: 0 auto 20px auto !important; /* Centra la imagen */
+        float: none !important; /* Elimina alineaciones antiguas a los lados */
+    }
+}
