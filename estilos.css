@@ -3653,3 +3653,44 @@ body {
         text-decoration: none !important;
     }
 }
+/* ==============================================================
+   MENÚ MÓVIL EXACTO
+============================================================== */
+@media screen and (max-width: 768px) {
+
+    /* Header centrado */
+    header, .header {
+        width: 100% !important;
+        padding: 8px 5px !important;
+        box-sizing: border-box !important;
+        background-color: #ffffff !important;
+    }
+
+    /* Logo superior */
+    header img, .header img, .logo img {
+        max-width: 110px !important;
+        height: auto !important;
+        display: block !important;
+        margin: 0 auto 6px auto !important;
+    }
+
+    /* Lista de enlaces en una sola fila compacta */
+    header nav ul, .header nav ul, nav ul {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-around !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        list-style: none !important;
+    }
+
+    header nav a, .header nav a, nav a {
+        font-size: 11px !important;
+        font-weight: bold !important;
+        padding: 2px 3px !important;
+        text-decoration: none !important;
+        white-space: nowrap !important;
+    }
+}
