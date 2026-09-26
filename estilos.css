@@ -3658,12 +3658,12 @@ body {
     .cuerda-header {
         margin-top: 85px !important;
         padding: 0 !important;
-    }
+
 
     .banner, .bienvenida, .hero, #inicio {
         width: 100% !important;
         max-width: 100% !important;
-        min-height: 100px !important; /* Muestra la imagen de fondo de nuevo */
+        min-height: 50px !important; /* Muestra la imagen de fondo de nuevo */
         height: auto !important;
         padding: 0 !important;
         margin: 0 auto !important;
