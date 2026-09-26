@@ -3599,41 +3599,48 @@ body {
     margin-top: 40px !important;
 }
 /* ==============================================================
-   FORZADO ABSOLUTO PARA EL BANNER
+   SOLUCIÓN DEFINITIVA PARA BANNER E IMAGEN DE FONDO EN MÓVIL
 ============================================================== */
 @media (max-width: 768px) {
 
-    /* Reducir el tamaño de la fuente base del banner para que todo se encoja */
-    body {
-        overflow-x: hidden !important;
+    /* 1. REDIMENSIONAR EL BANNER (Si es imagen de fondo en CSS) */
+    .banner, #inicio {
+        width: 100% !important;
+        max-width: 100vw !important;
+        min-height: 250px !important; /* Altura adecuada para pantalla de celular */
+        height: auto !important;
+        background-size: contain !important; /* Ajusta la imagen completa a la pantalla sin recortar */
+        background-repeat: no-repeat !important;
+        background-position: center top !important;
+        padding: 0 !important;
+        margin-top: 90px !important; /* Ajuste para que no lo tape el header */
     }
 
-    /* Reducir textos gigantes */
-    h1, h2, h3 {
+    /* 2. BOTÓN "VER CATÁLOGO" */
+    .btn-banner {
+        display: inline-block !important;
+        font-size: 12px !important;
+        padding: 8px 15px !important;
+        margin: 10px auto !important;
+        text-align: center !important;
+        width: max-content !important;
+    }
+
+    /* 3. SI LA SECCIÓN CON TEXTOS ESTÁ JUSTO DEBAJO DEL BANNER */
+    .banner + section, 
+    section:nth-of-type(2) {
+        width: 100% !important;
         max-width: 100% !important;
-        font-size: 20px !important;
-        white-space: normal !important;
-        word-break: break-word !important;
+        padding: 15px 10px !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
     }
 
-    /* Anular anchos fijos en cualquier contenedor */
-    div, section, main, article, header {
+    .banner + section *, 
+    section:nth-of-type(2) * {
         max-width: 100% !important;
         box-sizing: border-box !important;
-    }
-
-    /* Convertir cualquier estructura horizontal rígida a vertical */
-    .banner, .bienvenida, .hero, .flex, .grid {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        width: 100% !important;
-        padding: 10px !important;
-    }
-
-    /* Ajustar imágenes */
-    img {
-        max-width: 100% !important;
-        height: auto !important;
+        white-space: normal !important;
+        word-break: break-word !important;
     }
 }
