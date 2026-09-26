@@ -3656,7 +3656,7 @@ body {
 
     /* --- BANNER DE BIENVENIDA (LE DAMOS ALTO PARA QUE REAPAREZCA) --- */
     .cuerda-header {
-        margin-top: 60px !important;
+        margin-top: 40px !important;
         padding: 0 !important;
     }
 
