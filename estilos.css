@@ -3656,7 +3656,7 @@ body {
 
     /* --- BANNER DE BIENVENIDA (AJUSTADO PARA RECALCULAR IMAGEN COMPLETA) --- */
     .cuerda-header {
-        margin-top: 55px !important; /* Espacio justo pegado al menú sin franja verde */
+        margin-top: 60px !important; /* Espacio justo pegado al menú sin franja verde */
         padding: 0 !important;
     }
 
