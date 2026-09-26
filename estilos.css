@@ -3599,98 +3599,96 @@ body {
     margin-top: 40px !important;
 }
 /* ==============================================================
-   ARREGLO EXCLUSIVO: MENÚ IGUAL A LA PRIMERA IMAGEN
+   1. ARREGLO EXCLUSIVO: HEADER, MENÚ Y BANNER PARA CELULAR
 ============================================================== */
 @media (max-width: 768px) {
 
-    /* Contenedor principal del Header */
-    .header, header {
-        position: relative !important;
+    /* Evitar que el sitio se desborde a los lados */
+    html, body {
+        overflow-x: hidden !important;
         width: 100% !important;
-        padding: 10px 8px 4px 8px !important;
+    }
+
+    /* --- MENU Y HEADER --- */
+    .header, header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        padding: 5px 10px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
         box-sizing: border-box !important;
-        background-color: #ffffff !important;
-        text-align: center !important;
     }
 
-    /* Logo y textos superiores centrados */
+    /* Reducir el logo y títulos del header para que quepan */
     .header img, .logo img {
-        max-width: 110px !important;
+        max-width: 120px !important;
         height: auto !important;
-        display: block !important;
-        margin: 0 auto 5px auto !important;
     }
 
-    /* Barra de Navegación */
+    .header h1, .header p {
+        font-size: 12px !important;
+        text-align: center !important;
+        margin: 2px 0 !important;
+    }
+
+    /* Acomodar los enlaces del menú (Inicio, Productos, etc.) */
     .header nav, nav {
         width: 100% !important;
-        margin: 0 !important;
-        padding: 0 !important;
     }
 
     .header nav ul, nav ul {
         display: flex !important;
-        flex-direction: row !important;
-        justify-content: space-evenly !important; /* Distribuye Inicio, Productos, etc. en 1 sola fila */
-        align-items: center !important;
-        width: 100% !important;
+        flex-wrap: wrap !important; /* Si no caben en una línea, se acomodan abajo */
+        justify-content: center !important;
+        gap: 8px !important;
         padding: 0 !important;
         margin: 5px 0 0 0 !important;
         list-style: none !important;
     }
 
-    .header nav li, nav li {
-        display: inline-block !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
     .header nav a, nav a {
-        font-size: 11px !important;
-        font-weight: 600 !important;
-        padding: 2px 4px !important;
-        white-space: nowrap !important; /* Evita que las palabras se partan en dos líneas */
-        text-decoration: none !important;
+        font-size: 11px !important; /* Letra compacta para celular */
+        padding: 2px 5px !important;
     }
-}
-/* ==============================================================
-   MENÚ MÓVIL EXACTO
-============================================================== */
-@media screen and (max-width: 768px) {
 
-    /* Header centrado */
-    header, .header {
+    /* --- BANNER DE BIENVENIDA --- */
+    .cuerda-header {
+        margin-top: 110px !important; /* Espacio exacto para no tapar el banner */
+    }
+
+    .banner, .bienvenida, .hero {
         width: 100% !important;
-        padding: 8px 5px !important;
+        max-width: 100% !important;
+        padding: 15px 10px !important;
         box-sizing: border-box !important;
-        background-color: #ffffff !important;
+        text-align: center !important;
     }
 
-    /* Logo superior */
-    header img, .header img, .logo img {
-        max-width: 110px !important;
-        height: auto !important;
-        display: block !important;
-        margin: 0 auto 6px auto !important;
+    /* Ajustar textos del banner */
+    .banner h1, .bienvenida h1, .hero h1 {
+        font-size: 20px !important; /* Tamaño legible en pantalla pequeña */
+        line-height: 1.2 !important;
+        word-wrap: break-word !important;
     }
 
-    /* Lista de enlaces en una sola fila compacta */
-    header nav ul, .header nav ul, nav ul {
+    .banner h2, .bienvenida h2 {
+        font-size: 16px !important;
+    }
+
+    /* Ajustar las viñetas/botones verdes de (Calidad, Resistencia) */
+    .banner .opciones, .banner .items, .ofrecemos-items {
         display: flex !important;
-        flex-direction: row !important;
-        justify-content: space-around !important;
-        align-items: center !important;
-        width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        list-style: none !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 8px !important;
     }
 
-    header nav a, .header nav a, nav a {
+    .banner .item, .ofrecemos-item {
         font-size: 11px !important;
-        font-weight: bold !important;
-        padding: 2px 3px !important;
-        text-decoration: none !important;
-        white-space: nowrap !important;
+        padding: 5px 10px !important;
+        max-width: 100% !important;
     }
 }
