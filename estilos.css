@@ -3609,7 +3609,7 @@ body {
         width: 100% !important;
     }
 
-    /* --- MENU Y HEADER (INTACTO) --- */
+    /* --- MENU Y HEADER (NO SE TOCA NADA) --- */
     .header, header {
         position: fixed !important;
         top: 0 !important;
@@ -3641,7 +3641,7 @@ body {
 
     .header nav ul, nav ul {
         display: flex !important;
-        flex-wrap: wrap !important;
+        flex-wrap: wrap !important; /* Si no caben en una línea, se acomodan abajo */
         justify-content: center !important;
         gap: 8px !important;
         padding: 0 !important;
@@ -3650,42 +3650,42 @@ body {
     }
 
     .header nav a, nav a {
-        font-size: 11px !important;
+        font-size: 11px !important; /* Letra compacta para celular */
         padding: 2px 5px !important;
     }
 
-    /* --- BANNER DE BIENVENIDA (LE DAMOS ALTO PARA QUE REAPAREZCA) --- */
+    /* --- BANNER DE BIENVENIDA (AJUSTADO PARA RECALCULAR IMAGEN COMPLETA) --- */
     .cuerda-header {
-        margin-top: 85px !important;
+        margin-top: 85px !important; /* Espacio justo pegado al menú sin franja verde */
         padding: 0 !important;
     }
 
     .banner, .bienvenida, .hero, #inicio {
         width: 100% !important;
         max-width: 100% !important;
-        min-height: 200px !important; /* Muestra la imagen de fondo de nuevo */
         height: auto !important;
         padding: 0 !important;
         margin: 0 auto !important;
         box-sizing: border-box !important;
         text-align: center !important;
-        background-size: contain !important; /* Muestra la imagen 100% completa sin recortar */
+        background-size: 100% auto !important; /* Forzar imagen de fondo a encogerse al 100% */
         background-repeat: no-repeat !important;
         background-position: center top !important;
     }
 
-    /* Por si la imagen está puesta como etiqueta <img> */
+    /* Reducir imagen interna del banner si viene cargada como <img> */
     .banner img, .bienvenida img, .hero img, #inicio img {
         width: 100% !important;
         max-width: 100% !important;
         height: auto !important;
         display: block !important;
         margin: 0 auto !important;
+        object-fit: contain !important;
     }
 
     /* Ajustar textos del banner */
     .banner h1, .bienvenida h1, .hero h1 {
-        font-size: 18px !important;
+        font-size: 18px !important; /* Tamaño legible en pantalla pequeña */
         line-height: 1.2 !important;
         word-wrap: break-word !important;
     }
@@ -3694,7 +3694,7 @@ body {
         font-size: 14px !important;
     }
 
-    /* Ajustar las viñetas/botones verdes */
+    /* Ajustar las viñetas/botones verdes de (Calidad, Resistencia) */
     .banner .opciones, .banner .items, .ofrecemos-items {
         display: flex !important;
         flex-wrap: wrap !important;
