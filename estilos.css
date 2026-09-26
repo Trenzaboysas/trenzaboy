@@ -3599,194 +3599,17 @@ body {
     margin-top: 40px !important;
 }
 /* ==============================================================
-   AJUSTES RESPONSIVE MÓVIL
-============================================================== */
-@media (max-width: 768px) 
-/* --- ARREGLO OBLIGATORIO DEL BANNER --- */
-    /* Forzar a todos los elementos dentro de la sección de bienvenida/banner a no salirse */
-    section:first-of-type,
-    .banner, 
-    .bienvenida, 
-    .hero, 
-    .banner * {
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-    }
-
-    /* Reducir el texto gigante de "Bienvenido a Trenzaboy" */
-    section:first-of-type h1,
-    section:first-of-type h2,
-    .banner h1,
-    .banner h2,
-    .bienvenida h1,
-    .bienvenida h2 {
-        font-size: 22px !important;
-        line-height: 1.2 !important;
-        text-align: center !important;
-        white-space: normal !important;
-    }
-
-    /* Reducir y encajar las imágenes o círculos del banner */
-    section:first-of-type img,
-    .banner img,
-    .bienvenida img {
-        max-width: 100% !important;
-        height: auto !important;
-        display: block !important;
-        margin: 0 auto !important;
-    }
-
-    /* Acomodar los botones de Calidad, Resistencia, etc., en filas compactas */
-    .banner div, .bienvenida div {
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-    }
-{
-
-    /* --- 1. EVITAR DESPLAZAMIENTO LATERAL --- */
-    html, body {
-        overflow-x: hidden !important;
-        width: 100% !important;
-    }
-
-    /* --- 2. GUÍA DE DIÁMETROS Y PERSONALIZACIÓN --- */
-    .contenedor-guia {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 15px !important;
-        padding: 0 5px !important;
-    }
-
-    .tabla-diametros {
-        width: 100% !important;
-        overflow-x: visible !important;
-        font-size: 11px !important;
-        border-radius: 12px !important;
-    }
-
-    .tabla-diametros .encabezado div,
-    .fila-diametro > div {
-        padding: 6px 2px !important;
-        font-size: 10px !important;
-    }
-
-    .imagen-diametro img {
-        width: 35px !important;
-        height: 35px !important;
-    }
-
-    .personalizacion {
-        padding: 15px 12px !important;
-        border-radius: 12px !important;
-    }
-
-    /* --- 3. SECCIÓN PRODUCTOS --- */
-    .productos, 
-    .contenedor-productos,
-    .catalogo-productos,
-    .grid-productos {
-        display: flex !important;
-        flex-direction: column !important;
-        width: 100% !important;
-        padding: 20px 10px !important;
-        box-sizing: border-box !important;
-    }
-
-    .producto-card,
-    .tarjeta-producto,
-    .producto {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-        margin-bottom: 20px !important;
-    }
-
-    .producto-card img,
-    .tarjeta-producto img {
-        width: 100% !important;
-        height: auto !important;
-        max-height: 250px !important;
-        object-fit: cover !important;
-    }
-
-    /* --- 4. QUIÉNES SOMOS --- */
-    .quienes-somos, 
-    .tarjetas-contenedor, 
-    .grid-nosotros {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 15px !important;
-        padding: 15px 10px !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
-
-    .tarjeta, 
-    .card {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-        padding: 18px 15px !important;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.08) !important;
-    }
-
-    .tarjeta h3, .card h3 {
-        font-size: 16px !important;
-        margin-bottom: 8px !important;
-    }
-
-    .tarjeta p, .card p {
-        font-size: 13px !important;
-        line-height: 1.4 !important;
-    }
-
-    /* --- 5. ¿POR QUÉ ELEGIR TRENZABOY? --- */
-    .por-que-elegir, 
-    .porque-elegir,
-    .seccion-porque {
-        width: 100% !important;
-        padding: 30px 15px !important;
-        box-sizing: border-box !important;
-        background-size: cover !important;
-        background-position: center !important;
-    }
-
-    .por-que-elegir h2, 
-    .porque-elegir h2 {
-        font-size: 20px !important;
-        white-space: normal !important;
-        text-align: center !important;
-        line-height: 1.3 !important;
-        margin-bottom: 20px !important;
-    }
-
-    .beneficios-grid,
-    .tarjetas-abajo {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 12px !important;
-        width: 100% !important;
-    }
-
-    .tarjeta-abajo,
-    .ejemplo-personalizacion {
-        width: 100% !important;
-        height: auto !important;
-        min-height: 120px !important;
-    }
-}
-/* ==============================================================
-   1. ARREGLO EXCLUSIVO: HEADER, MENÚ Y BANNER PARA CELULAR
+   AJUSTES RESPONSIVE MÓVIL (HEADER, MENÚ Y BANNER)
 ============================================================== */
 @media (max-width: 768px) {
 
-    /* Evitar que el sitio se desborde a los lados */
+    /* Evitar desbordamiento horizontal */
     html, body {
         overflow-x: hidden !important;
         width: 100% !important;
     }
 
-    /* --- MENU Y HEADER --- */
+    /* --- 1. MENÚ Y HEADER COMPACTOS --- */
     .header, header {
         position: fixed !important;
         top: 0 !important;
@@ -3797,75 +3620,71 @@ body {
         flex-direction: column !important;
         align-items: center !important;
         box-sizing: border-box !important;
+        z-index: 9999 !important;
     }
 
-    /* Reducir el logo y títulos del header para que quepan */
     .header img, .logo img {
-        max-width: 120px !important;
+        max-width: 110px !important;
         height: auto !important;
     }
 
-    .header h1, .header p {
-        font-size: 12px !important;
-        text-align: center !important;
-        margin: 2px 0 !important;
-    }
-
-    /* Acomodar los enlaces del menú (Inicio, Productos, etc.) */
     .header nav, nav {
         width: 100% !important;
     }
 
     .header nav ul, nav ul {
         display: flex !important;
-        flex-wrap: wrap !important; /* Si no caben en una línea, se acomodan abajo */
+        flex-wrap: wrap !important;
         justify-content: center !important;
-        gap: 8px !important;
+        gap: 6px !important;
         padding: 0 !important;
-        margin: 5px 0 0 0 !important;
+        margin: 4px 0 0 0 !important;
         list-style: none !important;
     }
 
     .header nav a, nav a {
-        font-size: 11px !important; /* Letra compacta para celular */
-        padding: 2px 5px !important;
+        font-size: 11px !important;
+        padding: 2px 4px !important;
     }
 
-    /* --- BANNER DE BIENVENIDA --- */
-    .cuerda-header {
-        margin-top: 110px !important; /* Espacio exacto para no tapar el banner */
+    /* --- 2. BANNER DE BIENVENIDA (ESCALA MÓVIL AL 100%) --- */
+    /* Empujar el contenido hacia abajo para no taparlo con el header */
+    body {
+        padding-top: 100px !important;
     }
 
-    .banner, .bienvenida, .hero {
+    /* Reducir el contenedor principal del banner */
+    .banner, .bienvenida, .hero, main > section:first-of-type {
         width: 100% !important;
         max-width: 100% !important;
-        padding: 15px 10px !important;
+        padding: 10px 8px !important;
         box-sizing: border-box !important;
         text-align: center !important;
+        overflow: hidden !important;
     }
 
-    /* Ajustar textos del banner */
-    .banner h1, .bienvenida h1, .hero h1 {
-        font-size: 20px !important; /* Tamaño legible en pantalla pequeña */
+    /* Reducir títulos para que no se corten */
+    .banner h1, .bienvenida h1, .hero h1, main > section:first-of-type h1 {
+        font-size: 20px !important;
         line-height: 1.2 !important;
         word-wrap: break-word !important;
+        margin-bottom: 8px !important;
     }
 
-    .banner h2, .bienvenida h2 {
-        font-size: 16px !important;
+    .banner h2, .bienvenida h2, main > section:first-of-type h2 {
+        font-size: 15px !important;
+        line-height: 1.2 !important;
     }
 
-    /* Ajustar las viñetas/botones verdes de (Calidad, Resistencia) */
-    .banner .opciones, .banner .items, .ofrecemos-items {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        gap: 8px !important;
-    }
-
-    .banner .item, .ofrecemos-item {
-        font-size: 11px !important;
-        padding: 5px 10px !important;
+    /* Reducir imágenes dentro del banner si las hay */
+    .banner img, .bienvenida img, main > section:first-of-type img {
         max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Acomodar los items de "Calidad", "Resistencia", etc. */
+    .banner div, .bienvenida div, .ofrecemos-items {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
 }
