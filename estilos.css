@@ -3596,7 +3596,7 @@ body {
 }
 
 .cuerda-header {
-    margin-top: 40px !important;
+    margin-top: 70px !important;
 }
 /* ==============================================================
    1. ARREGLO EXCLUSIVO: HEADER, MENÚ Y BANNER PARA CELULAR
@@ -3656,7 +3656,7 @@ body {
 
     /* --- BANNER DE BIENVENIDA (AJUSTADO PARA RECALCULAR IMAGEN COMPLETA) --- */
     .cuerda-header {
-        margin-top: 60px !important; /* Espacio justo pegado al menú sin franja verde */
+        margin-top: 70px !important; /* Espacio justo pegado al menú sin franja verde */
         padding: 0 !important;
     }
 
