@@ -3663,7 +3663,7 @@ body {
     .banner, .bienvenida, .hero, #inicio {
         width: 100% !important;
         max-width: 100% !important;
-        min-height: 10px !important; /* Muestra la imagen de fondo de nuevo */
+        min-height: 50px !important; /* Muestra la imagen de fondo de nuevo */
         height: auto !important;
         padding: 0 !important;
         margin: 0 auto !important;
