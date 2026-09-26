@@ -3599,92 +3599,55 @@ body {
     margin-top: 40px !important;
 }
 /* ==============================================================
-   AJUSTES RESPONSIVE MÓVIL (HEADER, MENÚ Y BANNER)
+   FORZADO DEFINITIVO DE BANNER Y CONTENIDOS EN MÓVIL
 ============================================================== */
 @media (max-width: 768px) {
 
-    /* Evitar desbordamiento horizontal */
+    /* Bloquear desbordamiento horizontal global */
     html, body {
         overflow-x: hidden !important;
-        width: 100% !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        margin: 0 !important;
+        padding-x: 0 !important;
     }
 
-    /* --- 1. MENÚ Y HEADER COMPACTOS --- */
-    .header, header {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100% !important;
-        padding: 5px 10px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
+    /* FORZAR TODO ELEMENTO DEL BANNER A CABER EN LA PANTALLA */
+    body > *:not(#productos):not(.productos) {
+        max-width: 100% !important;
         box-sizing: border-box !important;
-        z-index: 9999 !important;
     }
 
-    .header img, .logo img {
-        max-width: 110px !important;
-        height: auto !important;
-    }
-
-    .header nav, nav {
+    /* Reducir todos los contenedores e imágenes dentro del Banner */
+    .banner, .bienvenida, .hero, main, section {
         width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px 5px !important;
+        overflow: hidden !important;
+        box-sizing: border-box !important;
     }
 
-    .header nav ul, nav ul {
-        display: flex !important;
+    /* Ajuste de imágenes del banner */
+    .banner img, .bienvenida img, section img {
+        max-width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+
+    /* Reducir tipografía gigante del banner */
+    .banner h1, .bienvenida h1, section h1,
+    .banner h2, .bienvenida h2, section h2,
+    .banner p, .bienvenida p {
+        font-size: 18px !important;
+        line-height: 1.2 !important;
+        word-break: break-word !important;
+        text-align: center !important;
+    }
+
+    /* Acomodar viñetas u opciones (Calidad, Resistencia) */
+    .banner div, .bienvenida div {
+        max-width: 100% !important;
         flex-wrap: wrap !important;
         justify-content: center !important;
-        gap: 6px !important;
-        padding: 0 !important;
-        margin: 4px 0 0 0 !important;
-        list-style: none !important;
-    }
-
-    .header nav a, nav a {
-        font-size: 11px !important;
-        padding: 2px 4px !important;
-    }
-
-    /* --- 2. BANNER DE BIENVENIDA (ESCALA MÓVIL AL 100%) --- */
-    /* Empujar el contenido hacia abajo para no taparlo con el header */
-    body {
-        padding-top: 100px !important;
-    }
-
-    /* Reducir el contenedor principal del banner */
-    .banner, .bienvenida, .hero, main > section:first-of-type {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 10px 8px !important;
-        box-sizing: border-box !important;
-        text-align: center !important;
-        overflow: hidden !important;
-    }
-
-    /* Reducir títulos para que no se corten */
-    .banner h1, .bienvenida h1, .hero h1, main > section:first-of-type h1 {
-        font-size: 20px !important;
-        line-height: 1.2 !important;
-        word-wrap: break-word !important;
-        margin-bottom: 8px !important;
-    }
-
-    .banner h2, .bienvenida h2, main > section:first-of-type h2 {
-        font-size: 15px !important;
-        line-height: 1.2 !important;
-    }
-
-    /* Reducir imágenes dentro del banner si las hay */
-    .banner img, .bienvenida img, main > section:first-of-type img {
-        max-width: 100% !important;
-        height: auto !important;
-    }
-
-    /* Acomodar los items de "Calidad", "Resistencia", etc. */
-    .banner div, .bienvenida div, .ofrecemos-items {
-        max-width: 100% !important;
-        box-sizing: border-box !important;
     }
 }
