@@ -3601,7 +3601,47 @@ body {
 /* ==============================================================
    AJUSTES RESPONSIVE MÓVIL
 ============================================================== */
-@media (max-width: 768px) {
+@media (max-width: 768px) 
+/* --- ARREGLO OBLIGATORIO DEL BANNER --- */
+    /* Forzar a todos los elementos dentro de la sección de bienvenida/banner a no salirse */
+    section:first-of-type,
+    .banner, 
+    .bienvenida, 
+    .hero, 
+    .banner * {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Reducir el texto gigante de "Bienvenido a Trenzaboy" */
+    section:first-of-type h1,
+    section:first-of-type h2,
+    .banner h1,
+    .banner h2,
+    .bienvenida h1,
+    .bienvenida h2 {
+        font-size: 22px !important;
+        line-height: 1.2 !important;
+        text-align: center !important;
+        white-space: normal !important;
+    }
+
+    /* Reducir y encajar las imágenes o círculos del banner */
+    section:first-of-type img,
+    .banner img,
+    .bienvenida img {
+        max-width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        margin: 0 auto !important;
+    }
+
+    /* Acomodar los botones de Calidad, Resistencia, etc., en filas compactas */
+    .banner div, .bienvenida div {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+{
 
     /* --- 1. EVITAR DESPLAZAMIENTO LATERAL --- */
     html, body {
