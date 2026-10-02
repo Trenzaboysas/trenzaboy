@@ -3708,3 +3708,31 @@ body {
         max-width: 100% !important;
     }
 }
+/* ==============================================================
+   ELIMINAR ESPACIO VERDE Y COLAPSAR ALTURA DEL BANNER
+============================================================== */
+@media (max-width: 768px) {
+
+    /* Quitar rellenos y fondo verde sobrante de la sección */
+    .banner, #inicio, .bienvenida, .hero {
+        min-height: unset !important;  /* Quita cualquier altura mínima forzada */
+        height: auto !important;       /* Se ajusta solo al tamaño real de la imagen */
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        background-color: transparent !important; /* Si la sección tiene color verde de fondo, lo quita */
+    }
+
+    /* Reducir espacio superior e inferior del botón Ver Catálogo */
+    .btn-banner {
+        margin-top: 5px !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* Quitar márgenes de la tira decorativa si existe */
+    .cuerda-header {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+}
