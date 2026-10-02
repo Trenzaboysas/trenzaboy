@@ -3709,30 +3709,38 @@ body {
     }
 }
 /* ==============================================================
-   ELIMINAR ESPACIO VERDE Y COLAPSAR ALTURA DEL BANNER
+   SOLUCIÓN DEFINITIVA: BANNER COMPLETO SIN ESPACIO VERDE
 ============================================================== */
 @media (max-width: 768px) {
 
-    /* Quitar rellenos y fondo verde sobrante de la sección */
-    .banner, #inicio, .bienvenida, .hero {
-        min-height: unset !important;  /* Quita cualquier altura mínima forzada */
-        height: auto !important;       /* Se ajusta solo al tamaño real de la imagen */
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
+    /* Quitar espacios de la tira decorativa */
+    .cuerda-header {
         margin-top: 0 !important;
         margin-bottom: 0 !important;
-        background-color: transparent !important; /* Si la sección tiene color verde de fondo, lo quita */
+        padding: 0 !important;
     }
 
-    /* Reducir espacio superior e inferior del botón Ver Catálogo */
-    .btn-banner {
+    /* Ajustar el contenedor del banner a la altura exacta de la imagen */
+    .banner, #inicio, .bienvenida, .hero {
+        width: 100% !important;
+        height: 150px !important;            /* ALTO EXACTO: muestra la imagen completa sin franja verde */
+        min-height: 150px !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        background-size: contain !important; /* Muestra la imagen entera sin recortar */
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        background-color: transparent !important;
+    }
+
+    /* Purgar elementos invisibles o textos dentro del banner si los hay */
+    .banner h1, .banner h2, .banner p, .banner .opciones {
+        display: none !important; /* Esconde textos duplicados si la imagen ya los trae integrados */
+    }
+
+    /* Pegar el botón de Ver Catálogo justo abajo del banner */
+    .btn-banner, a[href*="catalogo"], .banner + a, .banner + div {
         margin-top: 5px !important;
-        margin-bottom: 10px !important;
-    }
-
-    /* Quitar márgenes de la tira decorativa si existe */
-    .cuerda-header {
-        margin-bottom: 0 !important;
-        padding-bottom: 0 !important;
+        margin-bottom: 15px !important;
     }
 }
