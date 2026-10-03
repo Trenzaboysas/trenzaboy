@@ -3918,4 +3918,39 @@ body {
         margin: 0 !important;
         opacity: 0.9 !important;
     }
+    /* ==============================================================
+       AJUSTE DE TÍTULOS GENERALES Y SECCIÓN PRODUCCIÓN
+    ============================================================== */
+
+    /* Títulos principales h2 (Como "Nuestro Proceso de Producción") */
+    .titulo-seccion h2, 
+    .produccion h2, 
+    section h2, 
+    h2 {
+        font-size: 20px !important;       /* Tamaño visible, elegante y no gigantesco */
+        line-height: 1.25 !important;     /* Une las líneas verticalmente */
+        margin-top: 15px !important;
+        margin-bottom: 10px !important;
+        letter-spacing: -0.3px !important;
+    }
+
+    /* Subtítulos o títulos secundarios h3 (Como "Elaboración de Nuestros Productos") */
+    .produccion h3, 
+    section h3, 
+    h3 {
+        font-size: 17px !important;
+        line-height: 1.25 !important;
+        margin-top: 15px !important;
+        margin-bottom: 8px !important;
+    }
+
+    /* Párrafos descriptivos bajo los títulos */
+    .titulo-seccion p, 
+    .produccion p, 
+    section p {
+        font-size: 12px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 15px !important;
+        padding: 0 10px !important;      /* Un poquito de margen a los lados para que no toque los bordes */
+    }
 }
