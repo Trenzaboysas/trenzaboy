@@ -3821,98 +3821,92 @@ body {
         padding: 6px 2px !important;
         letter-spacing: -0.2px !important;
     }
-   /* ==============================================================
-       SOLUCIÓN DEFINITIVA Y LIMPIA PARA TABLA DE DIÁMETROS
+  /* ==============================================================
+       TABLA FLUIDA Y DESLIZABLE PARA CELULAR
     ============================================================== */
 
-    /* Permitir scroll suave si la tabla necesita espacio horizontal */
+    /* Contenedor principal: permite deslizamiento horizontal */
     .tabla-diametros {
         width: 100% !important;
         max-width: 100% !important;
-        margin: 15px auto !important;
-        overflow-x: auto !important;
+        overflow-x: auto !important; /* Habilita el scroll horizontal */
         -webkit-overflow-scrolling: touch !important;
-        border-radius: 12px !important;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+        border-radius: 10px !important;
+        margin: 15px 0 !important;
     }
 
-    /* Encabezado verde oscuro corregido */
-    .tabla-diametros .encabezado {
-        display: flex !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        background-color: #0d4a2b !important;
-        color: #ffffff !important;
-        padding: 10px 8px !important;
-        font-size: 10px !important;
-        font-weight: bold !important;
-        min-width: 320px !important;
-    }
-
-    .tabla-diametros .encabezado div {
-        flex: 1 !important;
-        text-align: center !important;
-        white-space: nowrap !important;
-        font-size: 9px !important;
-        color: #ffffff !important;
-    }
-
-    /* Filas limpias con espacio suficiente */
+    /* Ancho mínimo garantizado para que NADA se amontone */
+    .tabla-diametros .encabezado,
     .fila-diametro {
         display: flex !important;
         align-items: center !important;
-        justify-content: space-between !important;
-        padding: 12px 8px !important;
-        border-bottom: 1px solid #eee !important;
-        min-width: 320px !important;
+        min-width: 450px !important; /* Le da espacio holgado a las 4 columnas */
+        padding: 8px 10px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Encabezado verde */
+    .tabla-diametros .encabezado {
+        background-color: #0d4a2b !important;
+        color: #ffffff !important;
+        font-size: 10px !important;
+        font-weight: bold !important;
+    }
+
+    .tabla-diametros .encabezado div {
+        color: #ffffff !important;
+    }
+
+    /* Filas intercaladas */
+    .fila-diametro {
+        border-bottom: 1px solid #e0e0e0 !important;
         background-color: #ffffff !important;
     }
 
     .fila-diametro:nth-child(even) {
-        background-color: #f9fbf9 !important; /* Fondo suave intercalado */
+        background-color: #f9fbf9 !important;
     }
 
-    /* Muestras de imágenes con tamaño real y visible */
+    /* 1. COLUMNA IMAGEN (Agrandada y centrada) */
     .imagen-diametro {
-        flex: 0 0 50px !important;
+        flex: 0 0 90px !important; /* Espacio suficiente para ver bien la cuerda */
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
     }
 
     .imagen-diametro img {
-        width: 45px !important;
-        height: auto !important; /* Mantiene la proporción real de la cuerda */
-        max-height: 35px !important;
+        width: 75px !important;  /* Tamaño visible y nítido */
+        height: auto !important;
+        max-height: 45px !important;
         object-fit: contain !important;
         display: block !important;
     }
 
-    /* Pulgadas (Verde oscuro) */
+    /* 2. COLUMNA PULGADAS */
     .medida-pulgada {
-        flex: 0 0 45px !important;
+        flex: 0 0 65px !important;
         font-size: 12px !important;
         font-weight: bold !important;
         color: #0d4a2b !important;
         text-align: center !important;
     }
 
-    /* Milímetros (Rojo de marca) */
+    /* 3. COLUMNA MILÍMETROS */
     .medida-mm {
-        flex: 0 0 50px !important;
+        flex: 0 0 65px !important;
         font-size: 12px !important;
         font-weight: bold !important;
-        color: #c0392b !important; /* Rojo elegante para resaltar */
+        color: #c0392b !important;
         text-align: center !important;
     }
 
-    /* Aplicaciones recomendadas (Gris oscuro legible) */
+    /* 4. COLUMNA APLICACIONES */
     .aplicacion {
         flex: 1 !important;
         font-size: 10px !important;
-        line-height: 1.2 !important;
+        line-height: 1.3 !important;
         color: #333333 !important;
-        text-align: left !important;
-        padding-left: 6px !important;
+        padding-left: 8px !important;
     }
 }
