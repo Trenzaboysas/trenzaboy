@@ -4045,4 +4045,91 @@ body {
         display: block !important;
         white-space: normal !important;      /* Permite salto de línea si el texto es largo */
     }
+    /* ==============================================================
+       TARJETAS DE CONTACTO EN 2 COLUMNAS (2x2x2) EXACTO
+    ============================================================== */
+
+    .contacto {
+        padding: 25px 10px !important;
+    }
+
+    /* Título y subtítulo de la sección */
+    .contacto h2 {
+        font-size: 20px !important;
+        margin-bottom: 6px !important;
+    }
+
+    .subtitulo-contacto {
+        font-size: 11.5px !important;
+        line-height: 1.35 !important;
+        margin-bottom: 18px !important;
+        padding: 0 10px !important;
+    }
+
+    /* Contenedor que forma la cuadrícula de 2 columnas */
+    .contenedor-contacto {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 columnas exactas */
+        gap: 10px !important;                             /* Espacio entre tarjetas */
+        width: 100% !important;
+        padding: 0 5px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Diseño individual compacto de las 6 tarjetas */
+    .card-contacto {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 160px !important;                    /* Mismo alto para todas */
+        padding: 12px 8px !important;
+        margin: 0 !important;
+        background-color: #ffffff !important;
+        border-radius: 12px !important;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05) !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: space-between !important;       /* Distribuye el ícono, texto y botón proporcionalmente */
+        text-align: center !important;
+    }
+
+    /* Ícono superior (Verde) */
+    .card-contacto i {
+        font-size: 24px !important;
+        color: #8db600 !important;
+        margin-bottom: 4px !important;
+    }
+
+    /* Título de la tarjeta (WhatsApp, Teléfono, Correo, etc.) */
+    .card-contacto h3 {
+        font-size: 13px !important;
+        font-weight: bold !important;
+        color: #0d4a2b !important;
+        margin: 0 0 4px 0 !important;
+        line-height: 1.15 !important;
+    }
+
+    /* Texto/número dentro de la tarjeta */
+    .card-contacto p {
+        font-size: 10px !important;
+        line-height: 1.25 !important;
+        color: #444444 !important;
+        margin: 0 0 8px 0 !important;
+        word-break: break-word !important;               /* Evita que el correo se salga de los bordes */
+    }
+
+    /* Botones de enlace (Escribir, Llamar, Instagram, etc.) */
+    .card-contacto a {
+        width: 100% !important;
+        padding: 7px 4px !important;
+        font-size: 10px !important;
+        font-weight: bold !important;
+        text-decoration: none !important;
+        border-radius: 6px !important;
+        box-sizing: border-box !important;
+        display: block !important;
+        text-align: center !important;
+        line-height: 1.1 !important;
+    }
 }
