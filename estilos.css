@@ -3954,81 +3954,86 @@ body {
         padding: 0 10px !important;      /* Un poquito de margen a los lados para que no toque los bordes */
     }
 /* ==============================================================
-       AJUSTE EXCLUSIVO PARA LA SECCIÓN "POR QUÉ ELEGIR TRENZABOY"
+       TARJETAS EN CUADRÍCULA 2x2 PARA CELULAR (VENTAJAS Y DATOS)
     ============================================================== */
 
-    /* 1. VENTAJAS (Alta Calidad, Envíos, 100% Boyacenses, Asesoría) */
+    /* 1. VENTAJAS (2 columnas lado a lado) */
     .contenedor-ventajas {
-        display: flex !important;
-        flex-direction: column !important; /* Pone las 4 tarjetas una debajo de otra */
-        align-items: center !important;
-        gap: 15px !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* Fuerza 2 tarjetas por fila */
+        gap: 10px !important;
         width: 100% !important;
-        padding: 10px 15px !important;
+        padding: 10px 5px !important;
         box-sizing: border-box !important;
     }
 
     .contenedor-ventajas .ventaja {
         width: 100% !important;
-        max-width: 300px !important;       /* Evita que se corten los lados */
-        margin: 0 auto !important;
-        padding: 20px 15px !important;
+        max-width: 100% !important;
+        padding: 12px 8px !important; /* Relleno compacto para que no ocupen tanto alto */
+        margin: 0 !important;
         background-color: #ffffff !important;
-        border-radius: 12px !important;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06) !important;
+        border-radius: 10px !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
         text-align: center !important;
         box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
     }
 
     .contenedor-ventajas .ventaja i {
-        font-size: 28px !important;
-        color: #8db600 !important;          /* Color verde del ícono */
-        margin-bottom: 10px !important;
-        display: block !important;
-    }
-
-    .contenedor-ventajas .ventaja h3 {
-        font-size: 16px !important;
-        font-weight: bold !important;
-        color: #0d4a2b !important;
+        font-size: 22px !important; /* Ícono moderado */
+        color: #8db600 !important;
         margin-bottom: 6px !important;
     }
 
+    .contenedor-ventajas .ventaja h3 {
+        font-size: 13px !important;
+        font-weight: bold !important;
+        color: #0d4a2b !important;
+        margin-bottom: 4px !important;
+        line-height: 1.2 !important;
+    }
+
     .contenedor-ventajas .ventaja p {
-        font-size: 11.5px !important;
-        line-height: 1.35 !important;
+        font-size: 10px !important;
+        line-height: 1.25 !important;
         color: #555555 !important;
         margin: 0 !important;
     }
 
-    /* 2. ESTADÍSTICAS (24+ Productos, 500+ Clientes, etc.) */
+    /* 2. ESTADÍSTICAS (Las 3 en 1 fila o distribuidas) */
     .estadisticas {
-        display: flex !important;
-        flex-direction: column !important; /* Alinea los datos de estadísticas verticalmente */
-        align-items: center !important;
-        gap: 12px !important;
-        margin-top: 20px !important;
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important; /* Pone las 3 cifras alineadas */
+        gap: 5px !important;
+        margin-top: 15px !important;
         width: 100% !important;
+        padding: 0 5px !important;
+        box-sizing: border-box !important;
     }
 
     .estadisticas .dato {
         width: 100% !important;
-        max-width: 240px !important;
-        padding: 12px 10px !important;
-        margin: 0 auto !important;
+        padding: 8px 4px !important;
+        margin: 0 !important;
         text-align: center !important;
         box-sizing: border-box !important;
     }
 
     .estadisticas .dato h3 {
-        font-size: 22px !important;
+        font-size: 18px !important;
         font-weight: bold !important;
         color: #c0392b !important;
         margin: 0 0 2px 0 !important;
     }
 
     .estadisticas .dato span {
-        font-size: 11px !important;
+        font-size: 9.5px !important;
         color: #333333 !important;
+        line-height: 1.1 !important;
+        display: block !important;
     }
 }
