@@ -3953,4 +3953,68 @@ body {
         margin-bottom: 15px !important;
         padding: 0 10px !important;      /* Un poquito de margen a los lados para que no toque los bordes */
     }
+/* ==============================================================
+       AJUSTE PARA TARJETAS / BENEFICIOS (1 COLUMNA COMPLETA)
+    ============================================================== */
+
+    /* Contenedor principal de las tarjetas */
+    .beneficios, 
+    .caracteristicas, 
+    .tarjetas-container, 
+    .grid-tarjetas,
+    .nosotros-features {
+        display: flex !important;
+        flex-direction: column !important; /* Pone una tarjeta debajo de otra */
+        align-items: center !important;
+        gap: 15px !important;
+        width: 100% !important;
+        padding: 10px 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Estilo individual de cada tarjeta */
+    .tarjeta, 
+    .card, 
+    .feature-card, 
+    .beneficio-item {
+        width: 100% !important;
+        max-width: 320px !important;      /* Ancho cómodo para que la letra no toque los bordes */
+        margin: 0 auto !important;
+        padding: 20px 15px !important;
+        box-sizing: border-box !important;
+        text-align: center !important;
+    }
+
+    /* Íconos e imágenes dentro de la tarjeta */
+    .tarjeta img, 
+    .card img, 
+    .feature-card img, 
+    .tarjeta i, 
+    .card i {
+        font-size: 28px !important;
+        max-width: 45px !important;
+        height: auto !important;
+        margin: 0 auto 10px auto !important;
+        display: block !important;
+    }
+
+    /* Títulos de las tarjetas (Ej: "Envíos", "100% Boyacenses", "500+") */
+    .tarjeta h3, .tarjeta h4, 
+    .card h3, .card h4, 
+    .feature-card h3, .feature-card h4 {
+        font-size: 16px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 8px !important;
+        word-wrap: break-word !important;
+    }
+
+    /* Textos descriptivos dentro de la tarjeta */
+    .tarjeta p, 
+    .card p, 
+    .feature-card p {
+        font-size: 11.5px !important;
+        line-height: 1.35 !important;
+        color: #555555 !important;
+        margin: 0 !important;
+    }
 }
