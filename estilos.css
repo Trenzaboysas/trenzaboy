@@ -3783,4 +3783,42 @@ body {
         overflow-x: auto !important;
         -webkit-overflow-scrolling: touch !important;
     }
+    /* ==============================================================
+       REDUCCIÓN FORZADA DE TABLA DE PRODUCTOS
+    ============================================================== */
+
+    /* Reducir texto global de celdas */
+    .tabla-productos td, .tabla-productos th,
+    .tabla td, .tabla th,
+    td, th {
+        padding: 4px 2px !important;
+        font-size: 10px !important;
+        line-height: 1.1 !important;
+    }
+
+    /* Reducir textos de números grandes (1/4", 3/8", 6, 10, etc.) */
+    td span, td p, td div,
+    .pulgadas, .milimetros, .rendimiento, .diametro {
+        font-size: 11px !important;
+        font-weight: bold !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Achicar muestras de cuerdas */
+    td img, .tabla img, table img {
+        max-width: 35px !important;
+        max-height: 25px !important;
+        width: auto !important;
+        height: auto !important;
+        object-fit: contain !important;
+        margin: 0 auto !important;
+    }
+
+    /* Encabezados oscuros superiores (DIÁMETRO, PULGADAS, MILÍMETROS) */
+    th, .th, .tabla-header, thead th {
+        font-size: 9px !important;
+        padding: 6px 2px !important;
+        letter-spacing: -0.2px !important;
+    }
 }
