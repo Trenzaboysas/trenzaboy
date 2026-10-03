@@ -3853,4 +3853,69 @@ body {
         padding-left: 4px !important;
         box-sizing: border-box !important;
     }
+    /* ==============================================================
+       COMPACTAR SECCIÓN PERSONALIZACIÓN A TU MEDIDA
+    ============================================================== */
+
+    /* Reducir espacio general del contenedor verde */
+    .personalizacion {
+        padding: 15px 10px !important;
+        margin-top: 15px !important;
+        border-radius: 12px !important;
+    }
+
+    /* Título principal de la tarjeta */
+    .personalizacion h3 {
+        font-size: 14px !important;
+        margin-bottom: 12px !important;
+        text-align: center !important;
+        letter-spacing: 0px !important;
+    }
+
+    /* Convertir la lista de opciones en una cuadrícula de 2 columnas */
+    .personalizacion {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* Contenedor que agrupa las opciones (o aplica directamente si las opciones están sueltas) */
+    .personalizacion .opcion {
+        display: flex !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+        padding: 8px 6px !important; /* Relleno compacto */
+        margin-bottom: 8px !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important; /* Línea divisoria sutil */
+    }
+
+    /* Ícono verde cuadrado achicado */
+    .personalizacion .opcion i,
+    .personalizacion .opcion .icono,
+    .personalizacion .opcion img {
+        font-size: 14px !important;
+        width: 32px !important;
+        height: 32px !important;
+        min-width: 32px !important;
+        min-height: 32px !important;
+        border-radius: 8px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* Títulos de cada opción (Diámetros Especiales, Colores, etc.) */
+    .personalizacion .opcion h4 {
+        font-size: 11px !important;
+        font-weight: bold !important;
+        margin: 0 0 2px 0 !important;
+        line-height: 1.2 !important;
+    }
+
+    /* Texto descriptivo bajo los títulos */
+    .personalizacion .opcion p {
+        font-size: 9.5px !important;
+        line-height: 1.2 !important;
+        margin: 0 !important;
+        opacity: 0.9 !important;
+    }
 }
