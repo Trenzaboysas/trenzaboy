@@ -3743,170 +3743,114 @@ body {
         margin-top: 5px !important;
         margin-bottom: 15px !important;
     }
+   
     /* ==============================================================
-       AJUSTE COMPACTO PARA TABLAS EN CELULAR
-    ============================================================== */
-    
-    /* Contenedor de la tabla para evitar que se desborde */
-    table, .tabla, .tabla-productos {
-        width: 100% !important;
-        max-width: 100% !important;
-        border-collapse: collapse !important;
-        margin: 10px auto !important;
-    }
-
-    /* Reducir el relleno de los encabezados (TH) y celdas (TD) */
-    table th, table td, .tabla th, .tabla td {
-        padding: 6px 4px !important;  /* Reduce drásticamente el espacio vertical y horizontal */
-        font-size: 11px !important;   /* Tamaño de letra compacto y legible */
-        text-align: center !important;
-    }
-
-    /* Encabezados más ajustados */
-    table th, .tabla th {
-        font-size: 10px !important;
-        padding: 8px 3px !important;
-        letter-spacing: 0px !important;
-    }
-
-    /* Reducir el tamaño de las imágenes dentro de la tabla */
-    table img, .tabla img {
-        max-width: 45px !important;   /* Reduce la muestra de la cuerda para ahorrar espacio */
-        height: auto !important;
-        display: block !important;
-        margin: 0 auto !important;
-    }
-
-    /* Permitir desplazarse hacia los lados solo si la tabla es más ancha que la pantalla */
-    .contenedor-tabla, .table-responsive {
-        width: 100% !important;
-        overflow-x: auto !important;
-        -webkit-overflow-scrolling: touch !important;
-    }
-    /* ==============================================================
-       REDUCCIÓN FORZADA DE TABLA DE PRODUCTOS
+       REESTRUCTURACIÓN COMPLETA Y LIMPIA DE LA TABLA
     ============================================================== */
 
-    /* Reducir texto global de celdas */
-    .tabla-productos td, .tabla-productos th,
-    .tabla td, .tabla th,
-    td, th {
-        padding: 4px 2px !important;
-        font-size: 10px !important;
-        line-height: 1.1 !important;
-    }
-
-    /* Reducir textos de números grandes (1/4", 3/8", 6, 10, etc.) */
-    td span, td p, td div,
-    .pulgadas, .milimetros, .rendimiento, .diametro {
-        font-size: 11px !important;
-        font-weight: bold !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    /* Achicar muestras de cuerdas */
-    td img, .tabla img, table img {
-        max-width: 35px !important;
-        max-height: 25px !important;
-        width: auto !important;
-        height: auto !important;
-        object-fit: contain !important;
-        margin: 0 auto !important;
-    }
-
-    /* Encabezados oscuros superiores (DIÁMETRO, PULGADAS, MILÍMETROS) */
-    th, .th, .tabla-header, thead th {
-        font-size: 9px !important;
-        padding: 6px 2px !important;
-        letter-spacing: -0.2px !important;
-    }
-  /* ==============================================================
-       TABLA FLUIDA Y DESLIZABLE PARA CELULAR
-    ============================================================== */
-
-    /* Contenedor principal: permite deslizamiento horizontal */
     .tabla-diametros {
+        display: block !important;
         width: 100% !important;
         max-width: 100% !important;
-        overflow-x: auto !important; /* Habilita el scroll horizontal */
-        -webkit-overflow-scrolling: touch !important;
-        border-radius: 10px !important;
         margin: 15px 0 !important;
+        padding: 0 !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
     }
 
-    /* Ancho mínimo garantizado para que NADA se amontone */
-    .tabla-diametros .encabezado,
-    .fila-diametro {
-        display: flex !important;
-        align-items: center !important;
-        min-width: 450px !important; /* Le da espacio holgado a las 4 columnas */
-        padding: 8px 10px !important;
-        box-sizing: border-box !important;
-    }
-
-    /* Encabezado verde */
+    /* 1. ENCABEZADO VERDE CON TEXTOS ALINEADOS */
     .tabla-diametros .encabezado {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
         background-color: #0d4a2b !important;
-        color: #ffffff !important;
-        font-size: 10px !important;
-        font-weight: bold !important;
+        border-radius: 8px 8px 0 0 !important;
+        padding: 8px 4px !important;
+        margin: 0 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .tabla-diametros .encabezado div {
         color: #ffffff !important;
+        font-size: 8.5px !important; /* Tamaño legible sin solaparse */
+        font-weight: bold !important;
+        text-align: center !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0px !important;
+        padding: 0 2px !important;
+        line-height: 1.1 !important;
     }
 
-    /* Filas intercaladas */
+    /* Reparto de ancho exacto para el encabezado */
+    .tabla-diametros .encabezado div:nth-child(1) { width: 25% !important; }
+    .tabla-diametros .encabezado div:nth-child(2) { width: 20% !important; }
+    .tabla-diametros .encabezado div:nth-child(3) { width: 20% !important; }
+    .tabla-diametros .encabezado div:nth-child(4) { width: 35% !important; }
+
+    /* 2. FILAS DE DATOS (CON MÁS ESPACIO) */
     .fila-diametro {
-        border-bottom: 1px solid #e0e0e0 !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
         background-color: #ffffff !important;
+        padding: 10px 4px !important;
+        border-bottom: 1px solid #e2e8f0 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .fila-diametro:nth-child(even) {
-        background-color: #f9fbf9 !important;
+        background-color: #f8fafc !important;
     }
 
-    /* 1. COLUMNA IMAGEN (Agrandada y centrada) */
+    /* 3. IMÁGENES GRANDES Y VISIBLES */
     .imagen-diametro {
-        flex: 0 0 90px !important; /* Espacio suficiente para ver bien la cuerda */
+        width: 25% !important;
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
+        padding: 0 !important;
     }
 
     .imagen-diametro img {
-        width: 75px !important;  /* Tamaño visible y nítido */
+        width: 100% !important;
+        max-width: 65px !important; /* Muestra la cuerda en tamaño real y amplio */
         height: auto !important;
-        max-height: 45px !important;
+        min-height: 25px !important;
         object-fit: contain !important;
         display: block !important;
+        margin: 0 auto !important;
     }
 
-    /* 2. COLUMNA PULGADAS */
+    /* 4. MEDIDAS */
     .medida-pulgada {
-        flex: 0 0 65px !important;
-        font-size: 12px !important;
+        width: 20% !important;
+        font-size: 11px !important;
         font-weight: bold !important;
         color: #0d4a2b !important;
         text-align: center !important;
     }
 
-    /* 3. COLUMNA MILÍMETROS */
     .medida-mm {
-        flex: 0 0 65px !important;
-        font-size: 12px !important;
+        width: 20% !important;
+        font-size: 11px !important;
         font-weight: bold !important;
         color: #c0392b !important;
         text-align: center !important;
     }
 
-    /* 4. COLUMNA APLICACIONES */
+    /* 5. TEXTO DE APLICACIONES */
     .aplicacion {
-        flex: 1 !important;
-        font-size: 10px !important;
-        line-height: 1.3 !important;
-        color: #333333 !important;
-        padding-left: 8px !important;
+        width: 35% !important;
+        font-size: 9.5px !important;
+        line-height: 1.2 !important;
+        color: #334155 !important;
+        text-align: left !important;
+        padding-left: 4px !important;
+        box-sizing: border-box !important;
     }
 }
