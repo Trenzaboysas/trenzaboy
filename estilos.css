@@ -3743,4 +3743,44 @@ body {
         margin-top: 5px !important;
         margin-bottom: 15px !important;
     }
+    /* ==============================================================
+       AJUSTE COMPACTO PARA TABLAS EN CELULAR
+    ============================================================== */
+    
+    /* Contenedor de la tabla para evitar que se desborde */
+    table, .tabla, .tabla-productos {
+        width: 100% !important;
+        max-width: 100% !important;
+        border-collapse: collapse !important;
+        margin: 10px auto !important;
+    }
+
+    /* Reducir el relleno de los encabezados (TH) y celdas (TD) */
+    table th, table td, .tabla th, .tabla td {
+        padding: 6px 4px !important;  /* Reduce drásticamente el espacio vertical y horizontal */
+        font-size: 11px !important;   /* Tamaño de letra compacto y legible */
+        text-align: center !important;
+    }
+
+    /* Encabezados más ajustados */
+    table th, .tabla th {
+        font-size: 10px !important;
+        padding: 8px 3px !important;
+        letter-spacing: 0px !important;
+    }
+
+    /* Reducir el tamaño de las imágenes dentro de la tabla */
+    table img, .tabla img {
+        max-width: 45px !important;   /* Reduce la muestra de la cuerda para ahorrar espacio */
+        height: auto !important;
+        display: block !important;
+        margin: 0 auto !important;
+    }
+
+    /* Permitir desplazarse hacia los lados solo si la tabla es más ancha que la pantalla */
+    .contenedor-tabla, .table-responsive {
+        width: 100% !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
 }
