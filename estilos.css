@@ -3821,4 +3821,70 @@ body {
         padding: 6px 2px !important;
         letter-spacing: -0.2px !important;
     }
+    /* ==============================================================
+       AJUSTE COMPACTO PARA GUÍA DE DIÁMETROS (ESTRUCTURA DIV)
+    ============================================================== */
+
+    /* Reducir márgenes del contenedor */
+    .tabla-diametros {
+        width: 100% !important;
+        margin: 5px auto !important;
+        padding: 0 !important;
+    }
+
+    /* Encabezado verde oscuro (DIÁMETRO, PULGADAS, MILÍMETROS...) */
+    .tabla-diametros .encabezado {
+        display: flex !important;
+        padding: 6px 2px !important;
+        font-size: 9px !important;
+        font-weight: bold !important;
+        text-align: center !important;
+        gap: 2px !important;
+    }
+
+    .tabla-diametros .encabezado div {
+        padding: 2px 1px !important;
+        line-height: 1.1 !important;
+    }
+
+    /* Cada fila de la tabla */
+    .fila-diametro {
+        display: flex !important;
+        align-items: center !important;
+        padding: 4px 2px !important; /* Reduce drásticamente la altura de cada fila */
+        min-height: auto !important;
+        border-bottom: 1px solid #eee !important;
+    }
+
+    /* Reducir el tamaño de las muestras de cuerdas */
+    .imagen-diametro {
+        width: 45px !important;
+        min-width: 45px !important;
+        padding: 0 !important;
+    }
+
+    .imagen-diametro img {
+        width: 100% !important;
+        max-width: 40px !important;
+        height: auto !important;
+        max-height: 25px !important;
+        object-fit: contain !important;
+        display: block !important;
+        margin: 0 auto !important;
+    }
+
+    /* Ajustar textos de medidas (1/4", 6 mm, etc.) */
+    .medida-pulgada, .medida-mm {
+        font-size: 11px !important;
+        font-weight: bold !important;
+        padding: 2px !important;
+        text-align: center !important;
+    }
+
+    /* Texto de aplicaciones recomendadas */
+    .aplicacion {
+        font-size: 9px !important;
+        line-height: 1.1 !important;
+        padding: 2px !important;
+    }
 }
