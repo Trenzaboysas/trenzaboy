@@ -3954,37 +3954,39 @@ body {
         padding: 0 10px !important;      /* Un poquito de margen a los lados para que no toque los bordes */
     }
 /* ==============================================================
-       TARJETAS EN CUADRÍCULA 2x2 PARA CELULAR (VENTAJAS Y DATOS)
+       AJUSTE COMPACTO PERFECTO: VENTAJAS (2x2) Y ESTADÍSTICAS
     ============================================================== */
 
-    /* 1. VENTAJAS (2 columnas lado a lado) */
+    /* 1. VENTAJAS (Cuadradas y bien proporcionadas) */
     .contenedor-ventajas {
         display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important; /* Fuerza 2 tarjetas por fila */
+        grid-template-columns: repeat(2, 1fr) !important;
         gap: 10px !important;
         width: 100% !important;
-        padding: 10px 5px !important;
+        padding: 5px 10px !important;
         box-sizing: border-box !important;
     }
 
     .contenedor-ventajas .ventaja {
         width: 100% !important;
         max-width: 100% !important;
-        padding: 12px 8px !important; /* Relleno compacto para que no ocupen tanto alto */
+        height: auto !important;
+        min-height: 140px !important;       /* Controla el alto para que no se estiren */
+        padding: 12px 8px !important;        /* Reduce el espacio vacío arriba y abajo */
         margin: 0 !important;
         background-color: #ffffff !important;
-        border-radius: 10px !important;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+        border-radius: 12px !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
         text-align: center !important;
         box-sizing: border-box !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
-        justify-content: flex-start !important;
+        justify-content: center !important;  /* Centra el contenido verticalmente */
     }
 
     .contenedor-ventajas .ventaja i {
-        font-size: 22px !important; /* Ícono moderado */
+        font-size: 22px !important;
         color: #8db600 !important;
         margin-bottom: 6px !important;
     }
@@ -3993,8 +3995,8 @@ body {
         font-size: 13px !important;
         font-weight: bold !important;
         color: #0d4a2b !important;
-        margin-bottom: 4px !important;
-        line-height: 1.2 !important;
+        margin: 0 0 4px 0 !important;
+        line-height: 1.15 !important;
     }
 
     .contenedor-ventajas .ventaja p {
@@ -4004,36 +4006,43 @@ body {
         margin: 0 !important;
     }
 
-    /* 2. ESTADÍSTICAS (Las 3 en 1 fila o distribuidas) */
+    /* 2. ESTADÍSTICAS (Evita que se corten a los lados) */
     .estadisticas {
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important; /* Pone las 3 cifras alineadas */
-        gap: 5px !important;
-        margin-top: 15px !important;
+        display: flex !important;
+        flex-wrap: wrap !important;          /* Permite que si no caben las 3, se acomoden solas */
+        justify-content: center !important;
+        gap: 8px !important;
+        margin-top: 20px !important;
         width: 100% !important;
-        padding: 0 5px !important;
+        padding: 0 10px !important;
         box-sizing: border-box !important;
     }
 
     .estadisticas .dato {
-        width: 100% !important;
-        padding: 8px 4px !important;
+        flex: 1 1 30% !important;           /* Reparte el espacio equitativamente */
+        min-width: 90px !important;
+        padding: 10px 4px !important;
         margin: 0 !important;
+        background: #ffffff !important;
+        border-radius: 10px !important;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04) !important;
         text-align: center !important;
         box-sizing: border-box !important;
     }
 
     .estadisticas .dato h3 {
-        font-size: 18px !important;
+        font-size: 17px !important;
         font-weight: bold !important;
         color: #c0392b !important;
         margin: 0 0 2px 0 !important;
+        line-height: 1 !important;
     }
 
     .estadisticas .dato span {
-        font-size: 9.5px !important;
+        font-size: 9px !important;
         color: #333333 !important;
         line-height: 1.1 !important;
         display: block !important;
+        white-space: normal !important;      /* Permite salto de línea si el texto es largo */
     }
 }
